@@ -1,0 +1,112 @@
+/* Kaleem Solar Installer - DG Khan Custom Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-amber: #f59e0b;
+    --primary-dark: #0f172a;
+    --accent-green: #10b981;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f59e0b;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d97706;
+}
+
+/* Urdu Typography enhancement */
+.urdu-font, [lang="ur"] {
+    line-height: 1.8;
+}
+
+/* Range input custom design */
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #334155;
+    border-radius: 9999px;
+    height: 8px;
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #f59e0b;
+    cursor: pointer;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    background: #fbbf24;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #f59e0b;
+    cursor: pointer;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Pulse Glow Animation */
+@keyframes solarGlow {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(245, 158, 11, 0.8);
+    }
+}
+
+.glow-solar {
+    animation: solarGlow 3s infinite ease-in-out;
+}
+
+/* Accordion Animation */
+.faq-content {
+    transition: all 0.3s ease-in-out;
+}
+
+.faq-btn i {
+    transition: transform 0.3s ease;
+}
+
+.faq-btn.active i {
+    transform: rotate(180deg);
+}
+
+/* Card hover smooth transitions */
+.hover-lift {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.15);
+}
